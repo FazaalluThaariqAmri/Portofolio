@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+    transition: 0.3s;
+}
+
+
+/* NAVBAR */
+
+nav {
+    width: 100%;
+    padding: 25px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+
+    background: #ffffff;
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+#themeButton {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 150px 8% 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-text {
+    font-size: 13px;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #777;
+}
+
+.hero-text > p:not(.small-text) {
+    max-width: 500px;
+    line-height: 1.7;
+    opacity: 0.7;
+}
+
+
+/* BUTTON */
+
+.hello-button {
+    margin-top: 30px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hello-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+    width: 280px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+    border: 5px solid white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile-card > p {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.status {
+    margin-top: 25px;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    background: #f1f1f1;
+
+    font-size: 12px;
+}
+
+.status span {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: green;
+
+    margin-right: 5px;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 120px 8%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.description {
+    max-width: 700px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    opacity: 0.7;
+}
+
+
+/* SKILLS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card span {
+    opacity: 0.4;
+    font-size: 13px;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    font-size: 25px;
+}
+
+.card p {
+    opacity: 0.6;
+}
+
+
+/* HOBBIES */
+
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.hobbies div {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.hobbies div:hover {
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px 8%;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #ddd;
+
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+    background: #111;
+    color: #eee;
+}
+
+body.dark nav {
+    background: rgba(17, 17, 17, 0.8);
+}
+
+body.dark .profile-card,
+body.dark .card,
+body.dark .hobbies div {
+    background: #1c1c1c;
+}
+
+body.dark .avatar {
+    background: #1c1c1c;
+}
+body.dark .hello-button {
+    background: #ffffff;
+    color: #111;
+}
+
+body.dark .status {
+    background: #292929;
+}
+
+body.dark footer {
+    border-color: #333;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text > p:not(.small-text) {
+        margin: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 15px;
+
+    border-radius: 12px;
+
+    background: #f1f1f1;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.social-links a i {
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    transform: translateX(5px);
+    background: #ddd;
+}
+
+body.dark .social-links a {
+    background: #292929;
+    color: #eee;
+}
+
+body.dark .social-links a:hover {
+    background: #333;
+}
