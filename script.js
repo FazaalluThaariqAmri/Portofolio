@@ -1,5 +1,16 @@
 const themeButton = document.getElementById("themeButton");
 
+function applyStoredTheme() {
+    const stored = localStorage.getItem("theme");
+ 
+    if (stored === "dark") {
+        document.body.classList.add("dark");
+        themeButton.textContent = "☀️";
+    }
+}
+ 
+applyStoredTheme();
+
 themeButton.addEventListener("click", function () {
 
     document.body.classList.toggle("dark");
