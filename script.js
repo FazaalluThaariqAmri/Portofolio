@@ -15,6 +15,6 @@ themeButton.addEventListener("click", function () {
 
 function sayHello() {
 
-    alert("Hey! 👋 Thanks for visiting Fazalu's website!");
+    alert("Hey! 👋 Thanks for visiting my website!");
 
 }
