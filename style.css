@@ -140,6 +140,9 @@ nav h2 {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 
     transition: 0.3s;
+
+    display: grid;
+    gap: 20px;
 }
 
 .profile-card:hover {
@@ -153,8 +156,6 @@ nav h2 {
     object-fit: cover;
     border-radius: 50%;
 
-    margin-bottom: 20px;
-
     border: 5px solid white;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -162,7 +163,6 @@ nav h2 {
 
 .profile-card h3 {
     font-size: 24px;
-    margin-bottom: 8px;
 }
 
 .profile-card > p {
@@ -171,8 +171,6 @@ nav h2 {
 }
 
 .status {
-    margin-top: 25px;
-
     padding: 8px;
 
     border-radius: 20px;
@@ -180,19 +178,20 @@ nav h2 {
     background: #f1f1f1;
 
     font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .status span {
-    display: inline-block;
-
     width: 8px;
     height: 8px;
 
     border-radius: 50%;
 
     background: green;
-
-    margin-right: 5px;
 }
 
 
@@ -274,6 +273,10 @@ nav h2 {
     border-radius: 15px;
 
     transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hobbies div:hover {
@@ -367,7 +370,6 @@ body.dark footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .social-links a {
@@ -443,6 +445,9 @@ body.dark .social-links a:hover {
     border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -463,6 +468,10 @@ body.dark .social-links a:hover {
 
 .project-body {
     padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-body h3 {
@@ -495,6 +504,8 @@ body.dark .social-links a:hover {
 .project-links {
     display: flex;
     gap: 15px;
+
+    margin-top: auto;
 }
 
 .project-links a {
